@@ -29,10 +29,10 @@ body{
 }
 
 .main{
-    background-color: var(--lightGrayishBlue);
+    background-color: white;
     padding: 20px;
     max-width: 80%;
-    height: 700px;
+    height: 500px;
     border-radius: 20px;
     position: relative;
     top: 150px;
@@ -41,6 +41,9 @@ body{
     justify-content: center;
     font-size: 12px;
     }
+.box{
+    display: none;
+}    
 
 .image{
     position: absolute;
@@ -49,8 +52,9 @@ body{
     height: 150px;
     left: 0;
     right: 0;
-    margin: auto;    
-}
+    margin: auto; 
+    filter: drop-shadow(10px 25px  #e6e6ff);
+ }
 
 .desktop{
     display: none;
@@ -58,7 +62,7 @@ body{
 
 h1{
    text-align: center; 
-   padding: 60px 0 10px;
+   padding: 10px 0 10px;
 }
 
 .label{
@@ -100,6 +104,7 @@ h1{
         flex-direction: row;
         height: 400px;
         top: 10px;
+        overflow: hidden;
         }
 
     .image{
@@ -109,8 +114,14 @@ h1{
     .desktop{
        display: grid;
        position: absolute;
-       left: -60px;
+       left: -40px;
        top: 20px;
+       
+    }
+
+    .desktop img{
+      filter: drop-shadow(10px 60px  var(--lightGrayishBlue));
+        
     }
 
     h1{
@@ -123,12 +134,14 @@ h1{
     }
 
     .box{
-        display: grid;
+        display: flex;
         position: absolute;
-        width: 100px;
-        height: 100px;
-        top: 100px;
-        left: 10px;
+        width: 140px;
+        height: 140px;
+        top: 210px;
+        left: 94px;
+        z-index: 1;
+        
         }
 
     .right{
@@ -142,4 +155,8 @@ h1{
     .footer{
         bottom: 10px;
     }
+}
+
+@media {
+    
 }
